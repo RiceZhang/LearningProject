@@ -26,9 +26,10 @@
 ![普通工厂UML示例图片](img/case02.png "邮件发送场景")
 	
 ##示例场景Case3:结合实际开发来用谈谈工厂模式
-	在实际开发中，我们一般会用spring 的IOC 以及接口来实现工厂方法的一个并行结构。现在我最近遇到了这样一个场景：
+	> 在实际开发中，我们一般会用spring 的IOC 以及接口来实现工厂方法的一个并行结构。现在我最近遇到了这样一个场景：
 	我们要做一个数据统计，统计不同活动（如：秒杀活动、刮刮卡、抱团、瑶一摇、抢购等）
 	'''java
+	
 	@Autowired
 	@Qualifier("allActivityService")
 	private IActivityStaticsService allActivityService;//所有活动	
