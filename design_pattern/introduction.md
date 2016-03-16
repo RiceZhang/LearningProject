@@ -1,6 +1,9 @@
-#设计模式
+设计模式
+======================
 总体来说设计模式分为以下几大类：
 
+
+#划分方法一：
 ##1、创建型模式（共五种）
 工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。
 
@@ -14,6 +17,42 @@
 
 ##5、线程池模式
 
+
+#划分方法二：
+##1、接口型模式
+      适配器（Adapter）模式
+      外观（Facade） 模式
+      合成（Composite）模式
+      桥接模式（Bridge）模式
+
+##2、职责型模式
+	 单例（Singleton）	模式
+	 观察者（Observer）模式
+	 调停者（Mediator）模式
+	 代理（Proxy）模式
+	 责任链（Chain of Responsibility）模式
+	 亨元（Flyweight）模式
+
+
+##3、构造型模式
+	 构建者（Builder）模式
+	 工厂方法（Factory Method）模式
+	 抽象工厂（Abstract Factory）模式
+	 原型（Prototype）模式
+	 备忘录（Memento）模式
+
+##4、操作型模式
+	 模版方法（Template Method）模式	
+	 状态（State）模式
+	 策略（Strategy）模式
+	 命令（Command）模式
+	 解析器（interpreter）模式
+
+##5、扩展型模式
+     装饰器（Decorator）模式	  
+     迭代器（iterator）模式
+     访问者（Visitor）模式
+     
 
 #设计模式的六大原则
 - 1、开闭原则（Open Close Principle）
@@ -41,6 +80,13 @@
 
 > 原则是尽量使用合成/聚合的方式，而不是使用继承。
 
+
+
+1、接口型模式
+2、责任型模式
+3、构造型
+4、操作型
+5、扩展型
 
 
 参考资料：
