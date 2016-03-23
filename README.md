@@ -1,8 +1,7 @@
-algorithms
+Learning Project
 =========================
 #简介
-Data structures and algorithms
-数据结构和算法的学习项目。
+个人学习项目：结构采用 DDD 分包
 
 #目录
 ##数据结构部分
