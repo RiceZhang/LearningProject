@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.learning</groupId>
-    <artifactId>com.github.learning</artifactId>
+    <groupId>LearningProject</groupId>
+    <artifactId>LearningProject</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
@@ -16,7 +16,7 @@
         <module>logger</module>
         <module>jdbc</module>
         <module>knowledge</module>
-        <module>myJunit</module>
+        <module>myTest</module>
 		<module>springboot</module>
     </modules>
 
