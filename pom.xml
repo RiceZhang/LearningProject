@@ -18,6 +18,10 @@
         <module>knowledge</module>
         <module>myTest</module>
 		<module>springboot</module>
+        <module>activitymq</module>
+        <module>spring-mvc-showcase</module>
+        <module>parent</module>
+
     </modules>
 
 
