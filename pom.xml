@@ -11,19 +11,10 @@
 
     <!-- modual as dir name -->
     <modules>
-        <module>common</module>
-        <module>utils</module>
-        <module>logger</module>
-        <module>jdbc</module>
+	    <module>parent</module>
         <module>knowledge</module>
-        <module>myTest</module>
-		<module>springboot</module>
-        <module>activitymq</module>
-        <module>spring-mvc-showcase</module>
-        <module>parent</module>
-
+		<module>springboot-demo</module>
+        <module>spring-mvc-showcase</module>       
     </modules>
-
-
-
+	
 </project>

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>com.github.learning.spring-mvc-showcase</artifactId>
+    <artifactId>com.zrx.spring-mvc-showcase</artifactId>
     <packaging>war</packaging>
 
     <!-- 支持版本说明
