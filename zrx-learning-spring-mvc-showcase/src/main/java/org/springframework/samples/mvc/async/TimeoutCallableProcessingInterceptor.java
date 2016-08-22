@@ -7,7 +7,9 @@ import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
 /**
- * Created by R on 2016/4/24.
+ * Function:    JavaBean
+ * Author:      zhangrixiong
+ * DateTime:    2016/8/22 17:19
  */
 public class TimeoutCallableProcessingInterceptor implements HandlerMethodArgumentResolver {
 
