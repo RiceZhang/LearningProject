@@ -15,6 +15,7 @@ import org.springframework.web.context.WebApplicationContext;
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml")
 public class AbstractContextControllerTests {
 
+    // Spring 上下文
     @Autowired
     protected WebApplicationContext wac;
 

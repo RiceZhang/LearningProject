@@ -14,6 +14,8 @@ import java.util.concurrent.Callable;
  * Function:    CallableController
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:15
+ *
+ *  Callable ： J.U.C中并发框架
  */
 
 @Controller

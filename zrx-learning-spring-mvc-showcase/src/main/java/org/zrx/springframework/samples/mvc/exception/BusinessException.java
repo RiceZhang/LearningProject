@@ -5,5 +5,8 @@ package org.zrx.springframework.samples.mvc.exception;
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:52
  */
-public class BusinessException {
+
+@SuppressWarnings("serial")
+public class BusinessException extends Exception {
+
 }
