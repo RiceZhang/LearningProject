@@ -1,9 +1,15 @@
 package org.zrx.springframework.samples.mvc.convert;
 
+import java.lang.annotation.*;
+
 /**
  * Function:    MaskFormat
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:43
  */
-public class MaskFormat {
+@Target(value={ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface MaskFormat {
+    String value();
 }
