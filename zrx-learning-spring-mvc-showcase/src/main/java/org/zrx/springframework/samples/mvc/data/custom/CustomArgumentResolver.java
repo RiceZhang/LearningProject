@@ -1,6 +1,5 @@
 package org.zrx.springframework.samples.mvc.data.custom;
 
-
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -11,7 +10,6 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 /**
  * Created by R on 2016/4/24.
  */
-
 public class CustomArgumentResolver implements HandlerMethodArgumentResolver {
 
     public boolean supportsParameter(MethodParameter parameter) {
@@ -23,5 +21,4 @@ public class CustomArgumentResolver implements HandlerMethodArgumentResolver {
         RequestAttribute attr = parameter.getParameterAnnotation(RequestAttribute.class);
         return webRequest.getAttribute(attr.value(), WebRequest.SCOPE_REQUEST);
     }
-
 }

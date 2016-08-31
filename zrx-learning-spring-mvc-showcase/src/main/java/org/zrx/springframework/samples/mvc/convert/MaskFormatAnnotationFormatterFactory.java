@@ -15,7 +15,7 @@ import org.springframework.format.Printer;
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:43
  */
-public class MaskFormatAnnotationFormatterFactory  implements AnnotationFormatterFactory<MaskFormat> {
+public class MaskFormatAnnotationFormatterFactory implements AnnotationFormatterFactory<MaskFormat> {
 
     public Set<Class<?>> getFieldTypes() {
         Set<Class<?>> fieldTypes = new HashSet<Class<?>>(1, 1);

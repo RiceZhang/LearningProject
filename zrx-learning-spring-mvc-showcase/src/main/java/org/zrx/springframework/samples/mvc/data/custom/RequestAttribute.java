@@ -5,7 +5,6 @@ import java.lang.annotation.*;
 /**
  * Created by R on 2016/4/24.
  */
-
 @Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented

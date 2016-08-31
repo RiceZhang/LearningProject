@@ -1,14 +1,13 @@
 package org.zrx.springframework.samples.mvc.async;
 
 /**
- * Function:    JavaBean,在SpringMVC 中的JavaBean 一般为值类（请区分好值类和实体类）
+ * Function:    JavaBean
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:19
  */
-
 public class JavaBean {
-
     private String foo;
+
     private String fruit;
 
     public JavaBean(String foo, String fruit) {
@@ -31,5 +30,4 @@ public class JavaBean {
     public void setFruit(String fruit) {
         this.fruit = fruit;
     }
-
 }

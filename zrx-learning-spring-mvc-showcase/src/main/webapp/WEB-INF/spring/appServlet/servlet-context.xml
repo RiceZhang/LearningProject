@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure  -->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven conversion-service="conversionService" enable-matrix-variables="true">
@@ -23,9 +23,11 @@
 	</annotation-driven>
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources/ directory -->
+	<!-- 定义静态资源的位置 -->
 	<resources mapping="/resources/**" location="/resources/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<!-- spring 著名的 视图控制 -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
@@ -39,9 +41,10 @@
 	</beans:bean>
 
 	<!-- Only needed because we require fileupload in the org.springframework.samples.mvc.fileupload package -->
+	<!-- 配置多文件上传 -->
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
-	<!-- Imports user-defined @Controller beans that process client requests -->
+	<!-- Imports user-defined @Controller beans that process client requests 资源引入，在controllers.xml 中配置 @Controller MVC自动扫描 -->
 	<beans:import resource="controllers.xml" />
 
 	<task:annotation-driven />

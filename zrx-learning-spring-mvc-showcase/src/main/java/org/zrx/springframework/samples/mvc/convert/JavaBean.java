@@ -1,6 +1,5 @@
 package org.zrx.springframework.samples.mvc.convert;
 
-
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +13,6 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
  * DateTime:    2016/8/22 17:42
  */
 public class JavaBean {
-
     private Integer primitive;
 
     @DateTimeFormat(iso=ISO.DATE)

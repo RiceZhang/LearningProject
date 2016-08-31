@@ -5,7 +5,7 @@ package org.zrx.springframework.samples.mvc.convert;
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:44
  */
-public final class SocialSecurityNumber {
+public class SocialSecurityNumber {
 
     private final String value;
 
@@ -21,5 +21,4 @@ public final class SocialSecurityNumber {
     public static SocialSecurityNumber valueOf(@MaskFormat("###-##-####") String value) {
         return new SocialSecurityNumber(value);
     }
-
 }

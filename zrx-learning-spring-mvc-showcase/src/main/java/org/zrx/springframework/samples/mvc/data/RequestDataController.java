@@ -2,21 +2,25 @@ package org.zrx.springframework.samples.mvc.data;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.MatrixVariable;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * Function:    RequestDataController
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:46
  */
-
 @Controller
 @RequestMapping("/data")
 public class RequestDataController {
-
-    @RequestMapping(value="param", method= RequestMethod.GET)
-    public @ResponseBody
-    String withParam(@RequestParam String foo) {
+    @RequestMapping(value="param", method=RequestMethod.GET)
+    public @ResponseBody String withParam(@RequestParam String foo) {
         return "Obtained 'foo' query parameter value '" + foo + "'";
     }
 
@@ -63,5 +67,4 @@ public class RequestDataController {
     public @ResponseBody String withEntity(HttpEntity<String> entity) {
         return "Posted request body '" + entity.getBody() + "'; headers = " + entity.getHeaders();
     }
-
 }

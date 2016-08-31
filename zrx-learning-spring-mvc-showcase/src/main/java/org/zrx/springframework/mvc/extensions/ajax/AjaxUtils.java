@@ -6,22 +6,21 @@ import org.springframework.web.context.request.WebRequest;
  * Function:    AjaxUtils
  * Author:      Apple
  * DateTime:    2016/8/22 17:14
- *
- * AjaxUtils 工具类主要是功能
- * 1） 判断是否AjaxRequest
- * 2)  判断是否AjaxUpload
  */
 public class AjaxUtils {
+    /**
+     * 通过 获取请求头属性： X-Requested-Width 判断是否 Ajax 请求
+     * @param webRequest
+     * @return
+     */
+    public static boolean isAjaxRequest(WebRequest webRequest){
+            String requestedWith = webRequest.getHeader("X-Requested-Width");
+            return requestedWith != null ? "XMLHttpRequest".equals(requestedWith) : false;
+        }
 
-    public static boolean isAjaxRequest(WebRequest webRequest) {
-        String requestedWith = webRequest.getHeader("X-Requested-With");
-        return requestedWith != null ? "XMLHttpRequest".equals(requestedWith) : false;
-    }
+        public static boolean isAjaxUploadRequest(WebRequest webRequest) {
+            return webRequest.getParameter("ajaxUpload") != null;
+        }
 
-    public static boolean iaAjaxUploadRequest(WebRequest webRequest) {
-        return webRequest.getParameter("ajaxUpload") != null;
-    }
-
-    private AjaxUtils() {}
-
+        private AjaxUtils() {}
 }
