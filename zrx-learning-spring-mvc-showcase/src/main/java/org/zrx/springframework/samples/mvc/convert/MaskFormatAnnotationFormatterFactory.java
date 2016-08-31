@@ -11,7 +11,7 @@ import org.springframework.format.Parser;
 import org.springframework.format.Printer;
 
 /**
- * Function:    MaskFormatAnnotationFormatterFactory
+ * Function:    MaskFormatAnnotationFormatterFactory 实现控制反转
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:43
  */

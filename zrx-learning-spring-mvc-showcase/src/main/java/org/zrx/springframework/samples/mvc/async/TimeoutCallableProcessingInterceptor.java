@@ -7,7 +7,7 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.context.request.async.CallableProcessingInterceptorAdapter;
 
 /**
- * Function:    JavaBean
+ * Function:    TimeoutCallableProcessingInterceptor 时间超市
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:19
  */
