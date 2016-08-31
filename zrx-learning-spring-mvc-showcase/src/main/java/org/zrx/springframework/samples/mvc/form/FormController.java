@@ -1,10 +1,12 @@
 package org.zrx.springframework.samples.mvc.form;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zrx.springframework.mvc.extensions.ajax.AjaxUtils;
@@ -16,10 +18,13 @@ import javax.validation.Valid;
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:54
  */
+@Controller
+@RequestMapping("/form")
+@SessionAttributes("formBean")
 public class FormController {
 
     // Invoked on every request
-
+    // @ModelAttribute 注解表示，在请求每一个方法前都执行该方法
     @ModelAttribute
     public void ajaxAttribute(WebRequest request, Model model) {
         model.addAttribute("ajaxRequest", AjaxUtils.isAjaxRequest(request));

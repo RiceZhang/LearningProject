@@ -3,6 +3,7 @@ package org.zrx.springframework.samples.mvc.convert;
 import java.lang.annotation.*;
 
 /**
+ * 自定义注解
  * Function:    MaskFormat
  * Author:      zhangrixiong
  * DateTime:    2016/8/22 17:43
