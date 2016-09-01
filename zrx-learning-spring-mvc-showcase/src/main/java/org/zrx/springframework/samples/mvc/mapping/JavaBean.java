@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class JavaBean {
 
-    private String  foo = "bar";
+    private String foo = "bar";
 
     private String fruit = "apple";
 
@@ -32,6 +32,9 @@ public class JavaBean {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "JavaBean{" +
+                "foo='" + foo + '\'' +
+                ", fruit='" + fruit + '\'' +
+                '}';
     }
 }

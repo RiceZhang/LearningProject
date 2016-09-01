@@ -13,7 +13,7 @@ public class AjaxUtils {
      * @param webRequest
      * @return
      */
-    public static boolean isAjaxRequest(WebRequest webRequest){
+    public static boolean isAjaxRequest(WebRequest webRequest) {
             String requestedWith = webRequest.getHeader("X-Requested-Width");
             return requestedWith != null ? "XMLHttpRequest".equals(requestedWith) : false;
         }
