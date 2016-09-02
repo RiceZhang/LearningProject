@@ -60,12 +60,12 @@ public class CallableControllerTests extends AbstractContextControllerTests {
      */
     @Test
     public void view() throws Exception {
+
         // Mock 异步请求 视图页面
         MvcResult mvcResult = this.mockMvc.perform(get("/async/callable/view"))
                 .andExpect(request().asyncStarted())
                 .andExpect(request().asyncResult("views/html"))
                 .andReturn();
-
         // 测试结果，并校验参数 'foo' , 'fruit'
         this.mockMvc.perform(asyncDispatch(mvcResult))
                 .andExpect(status().isOk())
@@ -80,11 +80,13 @@ public class CallableControllerTests extends AbstractContextControllerTests {
      */
     @Test
     public void exception() throws Exception {
+
         // 发送请求
         MvcResult mvcResult = this.mockMvc.perform(get("/async/callable/exception"))
                 .andExpect(request().asyncStarted())
                 .andExpect(request().asyncResult(instanceOf(IllegalStateException.class)))
                 .andReturn();
+
         // 请求结果
         this.mockMvc.perform(asyncDispatch(mvcResult))
                 .andExpect(status().isOk())
@@ -92,7 +94,5 @@ public class CallableControllerTests extends AbstractContextControllerTests {
                 .andExpect(content().string("Handled exception:Callable error"));
 
     }
-
-
 
 }
