@@ -16,6 +16,7 @@
 	    <module>zrx-learning-parent</module>
 		<module>zrx-learning-springboot-demo</module>
         <module>zrx-learning-spring-mvc-showcase</module>
+        <module>zrx-learning-redis-demo</module>
     </modules>
 
 </project>
