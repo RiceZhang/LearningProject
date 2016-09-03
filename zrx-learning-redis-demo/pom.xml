@@ -3,12 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-        <parent>
-            <artifactId>LearningProject</artifactId>
-            <groupId>LearningProject</groupId>
-            <version>1.0-SNAPSHOT</version>
-        </parent>
         <modelVersion>4.0.0</modelVersion>
+
+        <parent>
+            <groupId>LearningProject</groupId>
+            <artifactId>learning-parent</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <relativePath>../zrx-learning-parent/pom.xml</relativePath>
+        </parent>
 
         <artifactId>com.zrx.redis-demo</artifactId>
         <name>zrx-learning-redis-demo</name>
