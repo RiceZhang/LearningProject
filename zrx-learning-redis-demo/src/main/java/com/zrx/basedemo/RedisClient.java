@@ -18,40 +18,45 @@ import java.util.Set;
  */
 public class RedisClient {
 
-    private Jedis jedis;//非切片客户端连接
-    private JedisPool jedisPool;//非切片连接池
-    private ShardedJedis shardedJedis;//切片客户端连接
-    private ShardedJedisPool shardedJedisPool;//切片连接池
+    private Jedis jedis; //非切片客户端连接
+    private JedisPool jedisPool; //非切片连接池  连接一台Redis
+    private ShardedJedis shardedJedis; //切片客户端连接
+    private ShardedJedisPool shardedJedisPool; //切片连接池 Redis集群
 
-    public RedisClient(){
+    public RedisClient() {
         initJedisPool();
         initShardedJendisPool();
-        jedis = jedisPool.getResource();
-        shardedJedis = shardedJedisPool.getResource();
+        jedis = jedisPool.getResource(); // 获取一台机的资源
+        shardedJedis = shardedJedisPool.getResource(); // 获取集群资源
     }
 
-    private void initJedisPool(){
+    /**
+     * 初始化一台 redis 的配置
+     */
+    private void initJedisPool() {
         //池基本配置
         JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
         jedisPoolConfig.setMaxTotal(20);
         jedisPoolConfig.setMaxIdle(5);
         jedisPoolConfig.setMaxWaitMillis(10001);
         jedisPoolConfig.setTestOnBorrow(false);
-
         jedisPool = new JedisPool(jedisPoolConfig,"127.0.0.1",6379);
     }
 
-    private void initShardedJendisPool(){
+    /**
+     * 初始化集群 redis 的池子配置
+     */
+    private void initShardedJendisPool() {
         // 池基本配置
         JedisPoolConfig config = new JedisPoolConfig();
         config.setMaxTotal(20);
         config.setMaxIdle(5);
         config.setMaxWaitMillis(1000l);
         config.setTestOnBorrow(false);
-        //slave连接
-        List<JedisShardInfo> shardInfos = new ArrayList<JedisShardInfo>();
-        shardInfos.add(new JedisShardInfo("127.0.0.1",6379,"master"));
-        //构造池
+        // slave连接
+        List<JedisShardInfo> shardInfos = new ArrayList<JedisShardInfo>(); // 从 redis
+        shardInfos.add(new JedisShardInfo("127.0.0.1",6379,"master")); // 主 redis
+        // 构造池
         shardedJedisPool = new ShardedJedisPool(config,shardInfos);
     }
 
@@ -62,8 +67,8 @@ public class RedisClient {
         SetOperate();
         SortedSetOperate();
         HashOperate();
-//        jedisPool.returnResource(jedis);
-//        shardedJedisPool.returnResource(shardedJedis);
+//      jedisPool.returnResource(jedis);
+//      shardedJedisPool.returnResource(shardedJedis);
     }
 
     private void KeyOperate() {
@@ -71,9 +76,9 @@ public class RedisClient {
         //清空所有数据
         System.out.println("清空库中所有数据："+jedis.flushDB());
         //判断key是否存在
-        System.out.println("判断key001键是否存在："+shardedJedis.exists("key001"));
-        System.out.println("新增key001,value001键值对："+shardedJedis.set("key001","value001"));
-        System.out.println("判断key001键是否存在："+shardedJedis.exists("key001"));
+        System.out.println("判断key001键是否存在：" + shardedJedis.exists("key001"));
+        System.out.println("新增key001,value001键值对：" + shardedJedis.set("key001","value001"));
+        System.out.println("判断key001键是否存在：" + shardedJedis.exists("key001"));
 
         //输出系统中所有的key
         System.out.println("新增key002,value002键值对："+shardedJedis.set("key002","value002"));
