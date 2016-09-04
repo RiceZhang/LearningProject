@@ -46,5 +46,4 @@ public class ResponseController {
         return new ResponseEntity<String>("The String ResponseBody with custom header Content-Type=text/plain",
                 headers,HttpStatus.OK);
     }
-
 }
