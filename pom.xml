@@ -10,10 +10,93 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>zrx-learningproject</name>
+    <url>https://github.com/zhangkaitao/es</url>
+    <description>个人学习项目</description>
+
 
     <modules>
         <module>zrx-learning-parent</module>
     </modules>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <organization>
+        <name>LearningProject</name>
+        <url>https://github.com/RiXiong/LearningProject</url>
+    </organization>
+
+    <!-- 开发人员信息 -->
+    <developers>
+        <developer>
+            <name>ricezhang</name>
+            <email>827935210@gmail.com</email>
+            <url>https://github.com/zhangkaitao</url>
+            <roles>
+                <role>software engineer</role>
+            </roles>
+            <timezone>8</timezone>
+        </developer>
+        <developer>
+            <name>RiXiong</name>
+            <email>827935210@gmail.com</email>
+            <url>https://github.com/zhangkaitao</url>
+            <roles>
+                <role>software engineer</role>
+            </roles>
+            <timezone>8</timezone>
+        </developer>
+    </developers>
+
+    <!--许可证 -->
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <!-- 持续集成信息 -->
+    <ciManagement>
+        <system>continuum</system>
+        <url>https://travis-ci.org/RiXiong/</url>
+        <notifiers>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>true</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>zhangkaitao0503@gmail.com</address>
+                </configuration>
+            </notifier>
+        </notifiers>
+    </ciManagement>
+
+    <!-- 问题反馈信息 -->
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/RiceZhang/LearningProject/issues</url>
+    </issueManagement>
+
+    <!-- 分发管理 -->
+    <distributionManagement>
+        <!-- mvn site:deploy 部署的位置-->
+        <site>
+            <id>local</id>
+            <name>filesystem</name>
+            <!-- 修改到磁盘的相应位置 -->
+            <url>file:D:\target\site</url>
+        </site>
+    </distributionManagement>
+
+    <!-- 版本控制信息 -->
+    <scm>
+        <url>https://github.com/RiceZhang/LearningProject/</url>
+        <connection>scm:git:git@github.com:RiceZhang/LearningProject.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:RiceZhang/LearningProject.git</developerConnection>
+    </scm>
 
 </project>
