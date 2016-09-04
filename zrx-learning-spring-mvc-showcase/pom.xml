@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>LearningProject</groupId>
+        <artifactId>learning-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../zrx-learning-parent/pom.xml</relativePath>
+    </parent>
+
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-mvc-showcase</artifactId>
     <name>spring-mvc-showcase</name>
     <packaging>war</packaging>
     <version>1.0.0-BUILD-SNAPSHOT</version>
+
     <properties>
         <java-version>1.7</java-version>
         <org.springframework-version>4.2.2.RELEASE</org.springframework-version>
@@ -14,6 +24,8 @@
         <org.aspectj-version>1.8.1</org.aspectj-version>
         <org.slf4j-version>1.7.12</org.slf4j-version>
     </properties>
+
+
     <dependencies>
         <!-- Spring -->
         <dependency>
