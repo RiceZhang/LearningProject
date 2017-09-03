@@ -1,4 +1,1 @@
-/.idea
-/zrx-learning-parent/*.iml
-/*.iml
-/zrx-learning-springboot-demo/*.iml
+/platform-common/*.iml
