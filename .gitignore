@@ -1,1 +1,5 @@
 /platform-common/*.iml
+/learning-java/target
+/learning-java/*.iml
+/learning-idea/*.iml
+/learning-parent/*.iml
