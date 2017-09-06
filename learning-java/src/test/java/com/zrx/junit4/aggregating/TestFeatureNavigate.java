@@ -4,7 +4,12 @@ import org.junit.Test;
 
 public class TestFeatureNavigate {
     @Test
-    public void testRun() {
+    public void testRun1() {
+
+    }
+
+    @Test
+    public void testRun2() {
 
     }
 }
